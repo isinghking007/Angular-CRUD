@@ -1,0 +1,10 @@
+  <small style="color: red;">Search here either by name or id </small><br>
+  <input type="text" placeholder="Search now.." [(ngModel)]="searchHere"><br>
+<table class="table table-hover">
+   <br> <tr *ngFor="let emp of service.list | filter:searchHere">
+        <td (click)="populateForm(emp)"> [{{emp.EMPCode}}]-{{emp.FullName}}</td>
+        <td (click)="populateForm(emp)">{{emp.Position}}</td>
+        <td (click)="populateForm(emp)">{{emp.Mobile}}</td>
+        <td><button (click)="onDelete(emp.EmployeeID)"  class="btn btn-sm btn-outline-danger">X</button></td>
+    </tr>
+</table>

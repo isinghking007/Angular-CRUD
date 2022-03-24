@@ -1,0 +1,6 @@
+<div style="text-align: center;">
+<button class="new" (click)="onClick(name)" *ngFor="let name of nameArray">
+    {{name}}&nbsp;&nbsp;
+</button>
+<app-work-child [newTitle]="title" [Details]="curr_work"></app-work-child>
+<router-outlet></router-outlet>
